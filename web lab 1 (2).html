@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Mahmoud - Portfolio</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #ce4040;x
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #4739e4;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Shared Section Styles */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 20px;
+            color: #eb5454;
+            margin-bottom: 25px;
+        }
+
+        /* About Section */
+        #about p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 20px;
+            width: 260px;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .project-card h3 {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .project-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Contact Section */
+        form {
+            max-width: 450px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            background-color: #fff;
+        }
+
+        form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        form input::placeholder, form textarea::placeholder {
+            color: #999;
+        }
+
+        form button {
+            background-color: #262626;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        form button:hover {
+            background-color: #444;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #262626;
+            color: #ddd;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mohamed Mahmoud</h1>
+        <p>Web Developer | Designer | Freelancer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Mohamed, a passionate web development student with experience in creating responsive and interactive websites. I love coding, designing, and bringing ideas to life on the web.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Car Rental System</h3>
+                <p>System for managing car rentals, system linked to a SQL server DB.</p>
+            </div>
+            <div class="project-card">
+                <h3>car prices Predector</h3>
+                <p> AI powered web app for predecting car prices.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mohamed Mahmoud . All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
