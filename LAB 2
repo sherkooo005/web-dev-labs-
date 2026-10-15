@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting App</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 18px;
+      font-family: Arial, sans-serif;
+      background-color: #cce5fa;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* White card containing everything */
+    .card {
+      width: 294px;
+      min-height: 244px;
+      padding: 22px 15px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px 0 16px;
+      color: #222;
+      font-size: 24px;
+    }
+
+    /* Keep input and button on the same row */
+    .input-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    input {
+      width: 158px;
+      min-width: 0;
+      padding: 6px 8px;
+      border: 1px solid #d0d0d0;
+      border-radius: 8px;
+      font-size: 11px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #2196f3;
+    }
+
+    button {
+      padding: 7px 12px;
+      border: none;
+      border-radius: 7px;
+      background-color: #2196f3;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1976d2;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px auto 0;
+      width: 223px;
+      max-width: 100%;
+    }
+
+    li {
+      padding: 6px 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      background-color: #e3f2fd;
+      color: #444;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background-color: #bbdefb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1 id="title">Welcome</h1>
+
+    <div class="input-group">
+      <input id="name" placeholder="Your name">
+      <button id="greet">Greet</button>
+    </div>
+
+    <ul id="list"></ul>
+  </div>
+
+  <script>
+    function addName() {
+      const input = document.getElementById('name');
+      const name = input.value.trim();
+
+      if (!name) {
+        document.getElementById('title').textContent = 'Please enter a name';
+        return;}
+
+      document.getElementById('title').textContent =
+        `Hello, ${name}!`;
+
+      const li = document.createElement('li');
+      li.textContent = name;
+
+      document.getElementById('list').appendChild(li);
+
+      input.value = '';
+    }
+
+    function removeName(e) {
+      if (e.target.nodeName === 'LI') {
+        const name = e.target.textContent;
+
+        document.getElementById('title').textContent =
+          `Goodbye, ${name}! see you later.`;
+
+        e.target.remove();
+      }
+    }
+
+    document.getElementById('greet')
+      .addEventListener('click', addName);
+
+    document.getElementById('list')
+      .addEventListener('click', removeName);
+  </script>
+
+</body>
+</html>
